@@ -1,4 +1,5 @@
 #' Get the path to a file bundled with this package
+#' @param filename name of a file bundled with this package
 #' @return the full path to a file bundled with this package
 #' @examples
 #' get_heyahmama_path("formations.csv")

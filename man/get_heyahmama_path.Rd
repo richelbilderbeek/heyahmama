@@ -6,6 +6,9 @@
 \usage{
 get_heyahmama_path(filename)
 }
+\arguments{
+\item{filename}{name of a file bundled with this package}
+}
 \value{
 the full path to a file bundled with this package
 }
