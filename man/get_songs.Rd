@@ -12,3 +12,9 @@ a tibble with the K3 songs
 \description{
 Get the K3 songs
 }
+\examples{
+get_songs()
+}
+\author{
+Richèl J.C. Bilderbeek
+}

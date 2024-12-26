@@ -15,3 +15,6 @@ Get the path to a file bundled with this package
 \examples{
 get_heyahmama_path("formations.csv")
 }
+\author{
+Richèl J.C. Bilderbeek
+}

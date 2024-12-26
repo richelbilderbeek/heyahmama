@@ -12,3 +12,9 @@ a tibble with the K3 CDs
 \description{
 Get the K3 CDs
 }
+\examples{
+get_cds()
+}
+\author{
+Richèl J.C. Bilderbeek
+}

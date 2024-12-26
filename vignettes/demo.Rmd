@@ -18,8 +18,21 @@ knitr::opts_chunk$set(
 library(heyahmama)
 ```
 
+Showing the CDs:
+
+```{r}
+get_cds()
+```
+
 Showing the formations:
 
 ```{r}
 get_formations()
 ```
+
+Showing the songs:
+
+```{r}
+get_songs()
+```
+

@@ -2,6 +2,8 @@
 #' @return the full path to a file bundled with this package
 #' @examples
 #' get_heyahmama_path("formations.csv")
+#' @author Richèl J.C. Bilderbeek
+#' @export
 get_heyahmama_path <- function(filename)
 {
     full <- system.file("extdata", filename, package = "heyahmama")

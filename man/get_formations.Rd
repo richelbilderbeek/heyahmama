@@ -12,3 +12,9 @@ a tibble with the K3 formations
 \description{
 Get the K3 formations
 }
+\examples{
+get_formations()
+}
+\author{
+Richèl J.C. Bilderbeek
+}
