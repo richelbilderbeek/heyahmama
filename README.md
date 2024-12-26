@@ -2,8 +2,8 @@
 
 <!-- markdownlint-disable MD013 --><!-- Badges cannot be split up over lines, hence will break 80 characters per line -->
 
-![R-CMD-check](https://github.com/richelbilderbeek/heyahmama/workflows/R-CMD-check/badge.svg?branch=master)
-[![codecov.io](https://codecov.io/github/richelbilderbeek/heyahmama/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/heyahmama/branch/master)
+![R-CMD-check](https://github.com/richelbilderbeek/heyahmama/workflows/R-CMD-check/badge.svg?branch=main)
+[![codecov.io](https://codecov.io/github/richelbilderbeek/heyahmama/coverage.svg?branch=main)](https://codecov.io/github/richelbilderbeek/heyahmama/branch/main)
 
 <!-- markdownlint-enable MD013 -->
 
