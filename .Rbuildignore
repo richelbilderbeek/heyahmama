@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^\.github$
 ^scripts/$
+^mlc_config.json$
+^\.markdownlint\.jsonc$
+^\.markdownlintignore$
+^\.wordlist\.txt$
