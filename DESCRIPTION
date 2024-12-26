@@ -1,0 +1,19 @@
+Package: heyahmama
+Type: Package
+Title: Data about the Flemish/Dutch band K3
+Version: 2.5.2
+Authors@R: c(
+    person("Richèl J.C.", "Bilderbeek", email = "rjcbilderbeek@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049"))
+Maintainer: Richèl J.C. Bilderbeek <rjcbilderbeek@gmail.com>
+Description: K3 is a Flemish/Dutch band.
+    This package contains data about this band.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Suggests:
+    testthat (>= 3.0.0)
+URL: https://github.com/richelbilderbeek/heyahmama
+BugReports: https://github.com/richelbilderbeek/heyahmama/issues
+Language: en-US
+VignetteBuilder: knitr
+Config/testthat/edition: 3
