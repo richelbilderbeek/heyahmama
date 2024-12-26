@@ -1,6 +1,13 @@
 # heyahmama
 
-Data about the Flemish/Dutch band K3
+<!-- markdownlint-disable MD013 --><!-- Badges cannot be split up over lines, hence will break 80 characters per line -->
+
+![R-CMD-check](https://github.com/richelbilderbeek/heyahmama/workflows/R-CMD-check/badge.svg?branch=master)
+[![codecov.io](https://codecov.io/github/richelbilderbeek/heyahmama/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/heyahmama/branch/master)
+
+<!-- markdownlint-enable MD013 -->
+
+R package about the Flemish/Dutch band K3.
 
 ## Files used by continuous integration scripts
 
