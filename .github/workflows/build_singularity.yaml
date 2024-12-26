@@ -1,0 +1,40 @@
+on:
+  push:
+  pull_request:
+
+name: build_singularity
+
+jobs:
+  build_singularity:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      matrix:
+        singularity_version:
+          - '3.8.1'
+    container:
+      image: quay.io/singularity/singularity:v${{ matrix.singularity_version }}
+      options: --privileged
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show singularity version
+        run: singularity version
+
+      - name: Build container
+        run: ./scripts/build_singularity_container.sh
+
+      - name: Test container, must detect BEAST2
+        run: singularity test beastier.sif
+
+      - name: Show help of container
+        run: singularity run-help beastier.sif
+
+      - name: Run container
+        run: ./scripts/run_container.sh
+
