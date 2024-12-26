@@ -3,5 +3,6 @@
 export(get_cds)
 export(get_composers)
 export(get_formations)
+export(get_formations_wide)
 export(get_heyahmama_path)
 export(get_songs)
