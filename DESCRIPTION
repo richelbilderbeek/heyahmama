@@ -11,12 +11,12 @@ License: GPL-3 + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 Imports:
-    readr,
-    tibble
+    readr
 Suggests:
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    tibble
 URL: https://github.com/richelbilderbeek/heyahmama
 BugReports: https://github.com/richelbilderbeek/heyahmama/issues
 Language: en-US
