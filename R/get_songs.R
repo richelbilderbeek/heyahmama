@@ -5,6 +5,7 @@
 #' - `track_number`: track number on that CD, e.g.
 #'   1 for the first track
 #' - `song_title`: title of the song
+#' - `duration`: duration of the song
 #' @examples
 #' get_songs()
 #' @author Richèl J.C. Bilderbeek
