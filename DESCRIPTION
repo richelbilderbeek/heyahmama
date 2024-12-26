@@ -11,7 +11,8 @@ License: GPL-3 + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 Imports:
-    readr
+    readr,
+    tibble
 Suggests:
     knitr,
     rmarkdown,
