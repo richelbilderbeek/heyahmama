@@ -21,18 +21,22 @@ library(heyahmama)
 Showing the CDs:
 
 ```{r}
-get_cds()
+knitr::kable(get_cds())
+```
+
+```{r}
+knitr::kable(get_composers())
 ```
 
 Showing the formations:
 
 ```{r}
-get_formations()
+knitr::kable(get_formations())
 ```
 
 Showing the songs:
 
 ```{r}
-get_songs()
+knitr::kable(get_songs())
 ```
 
