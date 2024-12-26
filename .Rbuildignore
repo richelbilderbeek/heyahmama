@@ -1,7 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.github$
-^scripts/$
+^scripts$
 ^mlc_config.json$
 ^\.markdownlint\.jsonc$
 ^\.markdownlintignore$
