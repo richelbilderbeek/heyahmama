@@ -7,7 +7,15 @@
 get_formations()
 }
 \value{
-a tibble with the K3 formations
+a tibble with the K3 formations. Column names are:
+\itemize{
+\item \code{formation}: the formation number, where 1 is the first formation
+\item \code{member_1}: the first member of that formation
+\item \code{member_2}: the second member of that formation
+\item \code{member_3}: the third member of that formation
+}
+
+The member names are sorted alphabetically
 }
 \description{
 Get the K3 formations

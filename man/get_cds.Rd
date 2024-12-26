@@ -7,7 +7,14 @@
 get_cds()
 }
 \value{
-a tibble with the K3 CDs
+a tibble with the K3 CDs:
+\itemize{
+\item \code{cd_title}: title of the CD
+\item \code{formation}: the formation number,
+where '1' denotes the first formation
+(see \link{get_formations} to get information on the formations)
+\item \code{year}: the release year of the CD
+}
 }
 \description{
 Get the K3 CDs

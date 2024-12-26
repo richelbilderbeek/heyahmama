@@ -7,7 +7,13 @@
 get_songs()
 }
 \value{
-a tibble with the K3 songs
+a tibble with the K3 songs. Column names are:
+\itemize{
+\item \code{cd_title}: title of the CD
+\item \code{track_number}: track number on that CD, e.g.
+1 for the first track
+\item \code{song_title}: title of the song
+}
 }
 \description{
 Get the K3 songs
