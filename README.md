@@ -7,7 +7,38 @@
 
 <!-- markdownlint-enable MD013 -->
 
-R package about the Flemish/Dutch band K3.
+`heyahmama` is an R package about the Flemish/Dutch band K3,
+contain data about its musical output,
+as well as functions to easily access that data.
+
+## Installation
+
+To install `heyahmama`, do:
+
+```r
+remotes::install_github("richelbilderbeek/heyahmama")
+```
+
+## Example usage
+
+```r
+library(heyahmama)
+
+# An overview of which member was in which formation
+formations <- get_formations()
+
+# Get a list of all CDs' titles and band formations
+cds <- get_cds()
+
+# Get the composers for each song
+composers <- get_composers()
+
+# Get an overview of all songs' CD, track number, song title and duration
+songs <- get_songs()
+```
+
+## How to cite this package
+
 
 ## Files used by continuous integration scripts
 
