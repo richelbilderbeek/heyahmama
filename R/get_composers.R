@@ -10,5 +10,8 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_composers <- function() {
-  readr::read_csv(get_heyahmama_path("composers.csv"), show_col_types = FALSE)
+  readr::read_csv(get_heyahmama_path(
+    "composers.csv"),
+    show_col_types = FALSE
+  )
 }

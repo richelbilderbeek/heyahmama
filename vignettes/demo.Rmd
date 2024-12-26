@@ -3,8 +3,10 @@ title: "demo"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{demo}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
@@ -14,29 +16,97 @@ knitr::opts_chunk$set(
 )
 ```
 
+`heyahmama` is an R package containing data regarding
+K3, the popular Flemish/Dutch band. It provides
+functions to easily access and work with that data.
+The package is named after the K3 song 'Heyah Mama',
+which is the first album CD of the band.
+
+To use `heyahmama`, first load the package:
+
 ```{r setup}
 library(heyahmama)
 ```
 
-Showing the CDs:
+Showing the first 6 CDs:
 
 ```{r}
-knitr::kable(get_cds())
+knitr::kable(head(get_cds()))
 ```
+
+Showing the first 2 songs with its composers:
 
 ```{r}
-knitr::kable(get_composers())
+knitr::kable(head(get_composers()))
 ```
 
-Showing the formations:
+We can use that data to plot how much songs were
+written by each composer:
+
+```{r}
+composers <- get_composers()
+composer_tally <- dplyr::count(composers, composer)
+ggplot2::ggplot(
+  data = composer_tally, 
+  ggplot2::aes(x = composer, y = n)
+) + ggplot2::geom_col() + 
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(
+      angle = 90,
+      vjust = 0.5,
+      hjust = 1
+    )
+  )
+```
+
+Showing all the band formations:
 
 ```{r}
 knitr::kable(get_formations())
 ```
 
-Showing the songs:
+Counting which singers where in how many formations:
 
 ```{r}
-knitr::kable(get_songs())
+formations <- get_formations()
+member_tally <- dplyr::count(formations, member)
+ggplot2::ggplot(
+  data = member_tally, 
+  ggplot2::aes(x = member, y = n)
+) + ggplot2::geom_col() + 
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(
+      angle = 90,
+      vjust = 0.5,
+      hjust = 1
+    )
+  )
+```
+
+Showing the first 6 songs:
+
+```{r}
+knitr::kable(head(get_songs()))
+```
+
+Combining these two tables, we can calculate how many
+songs are released by each formation:
+
+```{r}
+songs <- get_songs()
+cds <- get_cds()
+songs_and_cds <- merge(songs, cds)
+song_per_formation <- dplyr::count(songs_and_cds, formation)
+ggplot2::ggplot(
+  data = song_per_formation, 
+  ggplot2::aes(x = formation, y = n)
+) + ggplot2::geom_col() + 
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(
+      angle = 90,
+      vjust = 0.5,
+      hjust = 1
+    )
+  )
 ```
 
