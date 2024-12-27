@@ -3,5 +3,5 @@ bibentry(
   author = "Richèl JC Bilderbeek",
   title = "heyahmama: data about K3",
   year = "2024",
-  doi = "10.1111/2041-210X.13032",
+  doi = "10.5281/zenodo.14561968",
 )
