@@ -40,6 +40,10 @@ songs <- get_songs()
 
 ## How to cite this package
 
+## Logo
+
+The logo is based from a public domain image from
+[here](https://svgsilh.com/image/1174158.html).
 
 ## Files used by continuous integration scripts
 
