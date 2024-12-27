@@ -42,6 +42,9 @@ songs <- get_songs()
 
 ## How to cite this package
 
+See the file [inst/CITATION](inst/CITATION)
+that contains the citation of this package.
+
 ## Logo
 
 The logo is based from a public domain image from
