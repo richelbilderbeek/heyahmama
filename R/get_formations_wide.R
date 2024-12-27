@@ -19,12 +19,12 @@ get_formations_wide <- function() {
 
   get_formations() |>
     dplyr::group_by(formation) |>
-    dplyr::mutate(member_num = dplyr::row_number()) |>  # Add a numeric identifier for members
+    dplyr::mutate(member_num = dplyr::row_number()) |>
     dplyr::ungroup() |>
     tidyr::pivot_wider(
-      names_from = member_num,          # Create columns based on member numbers
-      values_from = member,             # Fill the columns with member names
-      names_prefix = "member_"          # Prefix column names with "member_"
+      names_from = member_num,
+      values_from = member,
+      names_prefix = "member_"
     ) |>
-  dplyr::select(formation, dplyr::everything())  # Ensure 'formation' comes first
+    dplyr::select(formation, dplyr::everything())
 }
