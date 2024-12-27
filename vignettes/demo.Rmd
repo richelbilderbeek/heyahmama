@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 `heyahmama` is an R package containing data regarding
-K3, the popular Flemish/Dutch band. It provides
+K3, the popular Flemish band. It provides
 functions to easily access and work with that data.
 The package is named after the K3 song 'Heyah Mama',
 which is the first album CD of the band.

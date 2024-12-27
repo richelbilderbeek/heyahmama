@@ -10,8 +10,8 @@
 
 ![heyahmama logo](man/figures/logo.png)
 
-`heyahmama` is an R package about the Flemish/Dutch band K3,
-contain data about its musical output,
+`heyahmama` is an R package about the Flemish band K3,
+containing data about its musical output,
 as well as functions to easily access that data.
 
 ## Installation
