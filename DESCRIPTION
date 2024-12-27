@@ -15,6 +15,7 @@ Imports:
     readr
 Suggests:
     dplyr,
+    geniusr,
     ggplot2,
     knitr,
     rmarkdown,

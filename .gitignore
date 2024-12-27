@@ -49,3 +49,4 @@ po/*~
 rsconnect/
 .Rproj.user
 inst/doc
+genius_access_token.txt
