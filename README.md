@@ -45,7 +45,7 @@ songs <- get_songs()
 ## Logo
 
 The logo is based from a public domain image from
-[here](https://svgsilh.com/image/1174158.html).
+[here](https://svgsilh.com/image/3093393.html).
 
 ## Files used by continuous integration scripts
 
