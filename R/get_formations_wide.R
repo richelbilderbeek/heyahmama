@@ -14,7 +14,7 @@
 get_formations_wide <- function() {
   get_formations() |>
     dplyr::group_by(formation) |>
-    dplyr::mutate(member_num = dplyr::row_number()) %>%  # Add a numeric identifier for members
+    dplyr::mutate(member_num = dplyr::row_number()) |>  # Add a numeric identifier for members
     dplyr::ungroup() |>
     tidyr::pivot_wider(
       names_from = member_num,          # Create columns based on member numbers
