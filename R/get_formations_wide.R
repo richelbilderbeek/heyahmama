@@ -12,6 +12,11 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_formations_wide <- function() {
+
+  formation <- NULL; rm(formation) # nolint, fixes warning: no visible binding for global variable
+  member <- NULL; rm(member) # nolint, fixes warning: no visible binding for global variable
+  member_num <- NULL; rm(member_num) # nolint, fixes warning: no visible binding for global variable
+
   get_formations() |>
     dplyr::group_by(formation) |>
     dplyr::mutate(member_num = dplyr::row_number()) |>  # Add a numeric identifier for members
@@ -21,5 +26,5 @@ get_formations_wide <- function() {
       values_from = member,             # Fill the columns with member names
       names_prefix = "member_"          # Prefix column names with "member_"
     ) |>
-  dplyr::select(formation, everything())  # Ensure 'formation' comes first
+  dplyr::select(formation, dplyr::everything())  # Ensure 'formation' comes first
 }
