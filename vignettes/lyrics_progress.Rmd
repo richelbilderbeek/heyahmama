@@ -2,7 +2,7 @@
 title: "Lyrics progress"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{demo}
+  %\VignetteIndexEntry{Lyrics progress}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 

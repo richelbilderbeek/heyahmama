@@ -8,11 +8,7 @@
 #' @export
 get_song_filename <- function(song_title) {
   paste0(
-    stringr::str_replace_all(
-      stringr::str_to_lower(song_title),
-      pattern = " ",
-      replacement = "_"
-    ),
+    snakecase::to_snake_case(song_title),
     ".txt"
   )
 }
