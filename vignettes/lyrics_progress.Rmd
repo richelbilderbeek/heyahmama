@@ -24,9 +24,11 @@ Here a table of all songs and if it has lyrics:
 ```{r}
 songs <- heyahmama::get_songs()
 t <- tibble::tibble(
-  song_title = sort(songs$song_title),
-  has_lyrics = NA
+  song_title = sort(songs$song_title)
 )
+t$filename = Vectorize(heyahmama::get_song_filename)(t$song_title)
+t$has_lyrics <- NA
+
 for (i in seq_len(nrow(t))) {
   song_title <- t$song_title[i]
   has_lyrics <- FALSE

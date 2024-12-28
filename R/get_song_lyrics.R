@@ -8,24 +8,18 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_song_lyrics <- function(song_title) {
-  filename <- paste0(
-    stringr::str_replace_all(
-      stringr::str_to_lower(song_title),
-      pattern = " ",
-      replacement = "_"
-    ),
-    ".txt"
-  )
-  text <- NA
+  filename <- get_song_filename(song_title)
+  path <- NA
   tryCatch({
-    text <- readr::read_lines(get_heyahmama_path(filename))
+    path <- get_heyahmama_path(filename)
   }, error = function(msg) {
     stop(
       "Cannot find the 'heyahmama' file for the song '",
       song_title, "', when looking for a file named '",
-      filename, "'. "
+      filename, "'. ",
+      msg$msg
     )
   }
   )
-  text
+  readr::read_lines(path)
 }
