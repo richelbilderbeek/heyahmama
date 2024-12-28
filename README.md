@@ -38,6 +38,10 @@ composers <- get_composers()
 
 # Get an overview of all songs' CD, track number, song title and duration
 songs <- get_songs()
+
+# Get the lyrics of a song
+lyrics <- get_song_lyrics("Heyah mama")
+
 ```
 
 ## How to cite this package
