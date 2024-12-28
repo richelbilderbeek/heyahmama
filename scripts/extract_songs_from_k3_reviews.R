@@ -35,7 +35,7 @@ convert_to_heyahmama_filename <- function(
   snake_case_basename <- stringr::str_replace(
     string = snakecase::to_snake_case(filename),
     pattern = "_md$",
-    replacement = ".md"
+    replacement = ".txt"
   )
   paste0(heyahmama_folder, "/", snake_case_basename)
 
