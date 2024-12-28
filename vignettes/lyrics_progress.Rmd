@@ -19,14 +19,25 @@ knitr::opts_chunk$set(
 `heyahmama` does not have all the lyrics to all the songs yet.
 This vignette shows the progress to this.
 
-Here a table of all songs and if it has lyrics:
+```{r}
+library(heyahmama)
+```
+
+First we get all songs:
 
 ```{r}
-songs <- heyahmama::get_songs()
+songs <- get_songs()
+message(paste0("There are ", nrow(songs), " songs"))
+```
+
+From those, we make a table of its filename
+and if it has lyrics:
+
+```{r}
 t <- tibble::tibble(
   song_title = sort(songs$song_title)
 )
-t$filename = Vectorize(heyahmama::get_song_filename)(t$song_title)
+t$filename = Vectorize(get_song_filename)(t$song_title)
 t$has_lyrics <- NA
 
 for (i in seq_len(nrow(t))) {
@@ -34,7 +45,7 @@ for (i in seq_len(nrow(t))) {
   has_lyrics <- FALSE
   tryCatch(
     {
-      heyahmama::get_song_lyrics(song_title)
+      get_song_lyrics(song_title)
       has_lyrics <- TRUE
     },
     error = function(msg) {}
@@ -42,7 +53,13 @@ for (i in seq_len(nrow(t))) {
   t$has_lyrics[i] <- has_lyrics
     
 }
-knitr::kable(t)
+knitr::kable(head(t))
+```
+
+And the missing songs only:
+
+```{r}
+knitr::kable(t[t$has_lyrics == FALSE,])
 ```
 
 In a plot:

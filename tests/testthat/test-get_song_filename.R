@@ -1,7 +1,19 @@
 test_that("minimal use", {
-  testthat::expect_equal(
+  expect_equal(
     get_song_filename("Heyah Mama"),
     "heyah_mama.txt"
+  )
+  expect_equal(
+    get_song_filename("De wereld van K3"),
+    "de_wereld_van_k3.txt"
+  )
+  expect_equal(
+    get_song_filename("10.000 luchtballonnen"),
+    "10000_luchtballonnen.txt"
+  )
+  expect_equal(
+    get_song_filename("Oya lélé"),
+    "oya_lele.txt"
   )
 })
 
@@ -22,5 +34,4 @@ test_that("song filenames should be well-formed", {
       )
     )
   )
-
 })

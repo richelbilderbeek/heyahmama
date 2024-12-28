@@ -7,8 +7,28 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_song_filename <- function(song_title) {
+  song_name_1 <- snakecase::to_snake_case(song_title)
+  # 'K3' is now 'k_3'
+  song_name_2 <- stringr::str_replace(
+    string = song_name_1,
+    pattern = "k_3",
+    replacement = "k3"
+  )
+  # '10.000' is now '10_000'
+  song_name_3 <- stringr::str_replace(
+    string = song_name_2,
+    pattern = "_000",
+    replacement = "000"
+  )
+  # 'é' is not supported well
+  song_name_4 <- stringr::str_replace_all(
+    string = song_name_3,
+    pattern = "é",
+    replacement = "e"
+  )
+
   paste0(
-    snakecase::to_snake_case(song_title),
+    song_name_4,
     ".txt"
   )
 }
