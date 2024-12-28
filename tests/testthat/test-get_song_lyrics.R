@@ -1,5 +1,4 @@
 test_that("minimal use", {
-
   expect_true(length(get_song_lyrics("Heyah mama")) > 0)
 })
 
