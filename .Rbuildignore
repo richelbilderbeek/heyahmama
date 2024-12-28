@@ -8,3 +8,4 @@
 ^\.wordlist\.txt$
 ^\.spellcheck\.yml$
 ^LICENSE$
+^genius_access_token\.txt$
