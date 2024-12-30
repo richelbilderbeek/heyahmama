@@ -7,7 +7,7 @@ test_that("use", {
   expect_true("duration" %in% names(get_songs()))
 })
 
-test_that("data is clean", {
+test_that("song titles have valid characters", {
   songs <- get_songs()
   song_titles <- songs$song_title
   malformed_titles <- stringr::str_subset(
@@ -16,4 +16,17 @@ test_that("data is clean", {
     negate = TRUE
   )
   testthat::expect_equal(0, length(malformed_titles))
+})
+
+test_that("all songs are on a CD", {
+  songs_cd_titles <- unique(get_songs()$cd_title)
+  cd_titles <- get_cds()$cd_title
+  if (!all(songs_cd_titles %in% cd_titles)) {
+    # Find out which songs_cd_titles are misformed
+    mismatches <- !songs_cd_titles %in% cd_titles
+    mismatched_titles <- songs_cd_titles[mismatches]
+    warning(mismatched_titles)
+  }
+
+  testthat::expect_true(all(songs_cd_titles %in% cd_titles))
 })
