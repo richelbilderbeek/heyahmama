@@ -22,6 +22,14 @@ test_that("lyrics of all songs have no weird tokens", {
       0,
       sum(stringr::str_detect(lyrics, pattern = "\\["))
     )
+    expect_equal(
+      0,
+      sum(stringr::str_detect(lyrics, pattern = "([Cc]horus)|CHORUS"))
+    )
+    expect_equal(
+      0,
+      sum(stringr::str_detect(lyrics, pattern = "([Vv]erse)|VERSE"))
+    )
   }
 
 })
