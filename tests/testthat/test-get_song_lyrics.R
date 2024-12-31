@@ -6,6 +6,26 @@ test_that("abuse", {
   expect_error(length(get_song_lyrics("absent song")))
 })
 
+test_that("lyrics of all songs have no weird tokens", {
+  for (song_title in get_songs()$song_title) {
+    lyrics <- c()
+
+    tryCatch(
+      lyrics <- get_song_lyrics(song_title),
+      error = function(msg) {
+        message(
+          paste0("'", song_title, "' does not have lyrics yet")
+        )
+      }
+    )
+    expect_equal(
+      0,
+      sum(stringr::str_detect(lyrics, pattern = "\\["))
+    )
+  }
+
+})
+
 test_that("compare to genius.com", {
   # songs <- geniusr::search_song(song_title)
   # geniusr::get_lyrics_url("https://genius.com/K3-heyah-mama-lyrics")
