@@ -38,7 +38,7 @@ Songs are written by 1 or more composers.
 Here are all different composers:
 
 ```{r}
-unique_composers <- sort(unique(composers$composer))
+unique_composers <- get_composer_names()
 n_composers <- 11
 expect_equal(n_composers, length(unique_composers))
 ```
@@ -143,23 +143,6 @@ knitr::kable(head(t))
 Now assign a group ID for each formation:
 
 ```{r}
-bools_to_int <- function(bools) {
-  exponent <- 0
-  sum <- 0
-  for (b in rev(bools)) {
-    sum <- sum + (as.integer(b) * (2 ^ exponent))
-    exponent <- exponent + 1
-  }
-  sum
-}
-expect_equal(0, bools_to_int(bools = c()))
-expect_equal(0, bools_to_int(bools = FALSE))
-expect_equal(0, bools_to_int(bools = rep(FALSE, 10)))
-expect_equal(1, bools_to_int(bools = TRUE))
-expect_equal(2, bools_to_int(bools = c(TRUE, FALSE)))
-expect_equal(3, bools_to_int(bools = rep(TRUE, 2)))
-expect_equal(4, bools_to_int(bools = c(TRUE, FALSE, FALSE)))
-
 t$group_id <- NA
 for (i in seq_len(n_rows)) {
   bools <- as.logical(t[i, 2:n_cols])
