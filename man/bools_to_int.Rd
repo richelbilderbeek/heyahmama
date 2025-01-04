@@ -6,6 +6,10 @@
 \usage{
 bools_to_int(bools)
 }
+\arguments{
+\item{bools}{a vector of booleans,
+with at least 1 element}
+}
 \value{
 a integer
 }

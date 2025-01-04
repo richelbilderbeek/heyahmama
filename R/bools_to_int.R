@@ -5,6 +5,8 @@
 #' the last bool encodes for a 1,
 #' the one-but-last bool encodes for a 2,
 #' etcetera.
+#' @param bools a vector of booleans,
+#'   with at least 1 element
 #' @return a integer
 #' @examples
 #' bools_to_int(FALSE) # 0
