@@ -2,7 +2,7 @@ test_that("minimal use", {
   expect_silent(get_writers())
   expect_true(tibble::is_tibble(get_writers()))
   expect_true("song_title" %in% names(get_writers()))
-  expect_true("writer" %in% names(get_writers()))
+  expect_true("writer_name" %in% names(get_writers()))
 })
 
 test_that("all song titles match get_songs()", {

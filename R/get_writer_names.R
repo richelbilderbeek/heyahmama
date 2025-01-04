@@ -6,5 +6,7 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_writer_names <- function() {
-  sort(unique(get_writers()$writer))
+  writers <- get_writers()
+  testthat::expect_true("writer_name" %in% names(writers))
+  sort(unique(get_writers()$writer_name))
 }

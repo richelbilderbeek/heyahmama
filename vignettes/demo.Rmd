@@ -34,21 +34,21 @@ Showing the first 6 CDs:
 knitr::kable(head(get_cds()))
 ```
 
-Showing the first 2 songs with its composers:
+Showing the first 2 songs with its writers:
 
 ```{r}
-knitr::kable(head(get_composers()))
+knitr::kable(head(get_writers()))
 ```
 
 We can use that data to plot how much songs were
-written by each composer:
+written by each writer:
 
 ```{r}
-composers <- get_composers()
-composer_tally <- dplyr::count(composers, composer)
+writers <- get_writers()
+writer_tally <- dplyr::count(writers, writer_name)
 ggplot2::ggplot(
-  data = composer_tally, 
-  ggplot2::aes(x = composer, y = n)
+  data = writer_tally, 
+  ggplot2::aes(x = writer_name, y = n)
 ) + ggplot2::geom_col() + 
   ggplot2::theme(
     axis.text.x = ggplot2::element_text(
