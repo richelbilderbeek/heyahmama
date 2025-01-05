@@ -1,5 +1,7 @@
 #' Get the K3 released songs
-#' @return a tibble with released K3 songs. Column names are:
+#' @return a tibble with released K3 songs.
+#'
+#' Column names are:
 #'
 #' - `cd_title`: title of the CD
 #' - `cd_number`: the CD number. For single-CD releases, this will be 1.

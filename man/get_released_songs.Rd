@@ -7,7 +7,9 @@
 get_released_songs()
 }
 \value{
-a tibble with released K3 songs. Column names are:
+a tibble with released K3 songs.
+
+Column names are:
 \itemize{
 \item \code{cd_title}: title of the CD
 \item \code{cd_number}: the CD number. For single-CD releases, this will be 1.
