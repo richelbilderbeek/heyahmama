@@ -14,8 +14,10 @@ a tibble with the K3 songs. Column names are:
 \item \code{track_number}: track number on that CD, e.g.
 1 for the first track
 \item \code{song_title}: title of the song
-\item \code{duration}: duration of this recording of the song.
-For some songs, e.g. 'Heyah mama', recordings differ
+\item \code{duration}: duration of this recording of the song,
+as indicated on the CD.
+Some songs, e.g. 'Heyah mama', have different durations for
+different recordings
 }
 }
 \description{
