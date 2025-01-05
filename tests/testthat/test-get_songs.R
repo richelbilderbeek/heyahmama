@@ -29,5 +29,5 @@ test_that("all songs are on a CD", {
     warning(mismatched_titles)
   }
 
-  testthat::expect_true(all(songs_cd_titles %in% cd_titles))
+  expect_true(all(songs_cd_titles %in% cd_titles))
 })

@@ -6,7 +6,8 @@
 #' - `track_number`: track number on that CD, e.g.
 #'   1 for the first track
 #' - `song_title`: title of the song
-#' - `duration`: duration of the song
+#' - `duration`: duration of this recording of the song.
+#'   For some songs, e.g. 'Heyah mama', recordings differ
 #' @examples
 #' get_songs()
 #' @author Richèl J.C. Bilderbeek
