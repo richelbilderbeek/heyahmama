@@ -10,6 +10,7 @@ get_songs()
 a tibble with the K3 songs. Column names are:
 \itemize{
 \item \code{cd_title}: title of the CD
+\item \code{cd_number}: the CD number. For single-CD releases, this will be 1.
 \item \code{track_number}: track number on that CD, e.g.
 1 for the first track
 \item \code{song_title}: title of the song

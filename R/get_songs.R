@@ -2,6 +2,7 @@
 #' @return a tibble with the K3 songs. Column names are:
 #'
 #' - `cd_title`: title of the CD
+#' - `cd_number`: the CD number. For single-CD releases, this will be 1.
 #' - `track_number`: track number on that CD, e.g.
 #'   1 for the first track
 #' - `song_title`: title of the song
