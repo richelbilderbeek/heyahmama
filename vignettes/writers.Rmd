@@ -53,7 +53,7 @@ table `writers`:
 
 ```{r}
 t <- tibble::tibble(
-  song_title = sort(get_songs()$song_title)
+  song_title = sort(get_released_songs()$song_title)
 )
 t$has_writer <- t$song_title %in% writers$song_title
 knitr::kable(head(t))
@@ -195,7 +195,7 @@ For which K3 formations have they written?
 ```{r}
 songs_by_most_prolific_group <- t[t$group_id == most_prolific_group_id, ]$song_title
 
-songs_on_cds <- dplyr::select(get_songs(), song_title, cd_title)
+songs_on_cds <- dplyr::select(get_released_songs(), song_title, cd_title)
 songs_on_cds_by_most_prolific_group <- songs_on_cds[
   songs_on_cds$song_title %in% songs_by_most_prolific_group,
 ]

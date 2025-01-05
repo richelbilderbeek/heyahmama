@@ -1,5 +1,5 @@
-#' Get the K3 songs
-#' @return a tibble with the K3 songs. Column names are:
+#' Get the K3 released songs
+#' @return a tibble with released K3 songs. Column names are:
 #'
 #' - `cd_title`: title of the CD
 #' - `cd_number`: the CD number. For single-CD releases, this will be 1.
@@ -11,9 +11,12 @@
 #'   Some songs, e.g. 'Heyah mama', have different durations for
 #'   different recordings
 #' @examples
-#' get_songs()
+#' get_released_songs()
 #' @author Richèl J.C. Bilderbeek
 #' @export
-get_songs <- function() {
-  readr::read_csv(get_heyahmama_path("songs.csv"), show_col_types = FALSE)
+get_released_songs <- function() {
+  readr::read_csv(
+    get_heyahmama_path("released_songs.csv"),
+    show_col_types = FALSE
+  )
 }

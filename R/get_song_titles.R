@@ -5,5 +5,5 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_song_titles <- function() {
-  sort(unique(get_songs()$song_title))
+  sort(unique(get_released_songs()$song_title))
 }

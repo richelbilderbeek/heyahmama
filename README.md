@@ -37,7 +37,7 @@ cds <- get_cds()
 composers <- get_composers()
 
 # Get an overview of all songs' CD, track number, song title and duration
-songs <- get_songs()
+songs <- get_released_songs()
 
 # Get the lyrics of a song
 lyrics <- get_song_lyrics("Heyah mama")

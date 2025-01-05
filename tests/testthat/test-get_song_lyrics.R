@@ -7,7 +7,7 @@ test_that("abuse", {
 })
 
 test_that("lyrics of all songs have no weird tokens", {
-  for (song_title in get_songs()$song_title) {
+  for (song_title in get_released_songs()$song_title) {
     lyrics <- c()
 
     tryCatch(

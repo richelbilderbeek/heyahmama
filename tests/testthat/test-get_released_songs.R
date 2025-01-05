@@ -1,15 +1,15 @@
 test_that("use", {
-  expect_silent(get_songs())
-  expect_true(tibble::is_tibble(get_songs()))
-  expect_true("cd_title" %in% names(get_songs()))
-  expect_true("cd_number" %in% names(get_songs()))
-  expect_true("track_number" %in% names(get_songs()))
-  expect_true("song_title" %in% names(get_songs()))
-  expect_true("duration" %in% names(get_songs()))
+  expect_silent(get_released_songs())
+  expect_true(tibble::is_tibble(get_released_songs()))
+  expect_true("cd_title" %in% names(get_released_songs()))
+  expect_true("cd_number" %in% names(get_released_songs()))
+  expect_true("track_number" %in% names(get_released_songs()))
+  expect_true("song_title" %in% names(get_released_songs()))
+  expect_true("duration" %in% names(get_released_songs()))
 })
 
 test_that("song titles have valid characters", {
-  songs <- get_songs()
+  songs <- get_released_songs()
   song_titles <- songs$song_title
   malformed_titles <- stringr::str_subset(
     string = song_titles,
@@ -20,7 +20,7 @@ test_that("song titles have valid characters", {
 })
 
 test_that("all songs are on a CD", {
-  songs_cd_titles <- unique(get_songs()$cd_title)
+  songs_cd_titles <- unique(get_released_songs()$cd_title)
   cd_titles <- get_cds()$cd_title
   if (!all(songs_cd_titles %in% cd_titles)) {
     # Find out which songs_cd_titles are misformed
@@ -33,7 +33,7 @@ test_that("all songs are on a CD", {
 })
 
 test_that("check duration from Ushuaia CD 1", {
-  songs <- dplyr::filter(get_songs(), cd_title == "Ushuaia", cd_number == 1)
+  songs <- dplyr::filter(get_released_songs(), cd_title == "Ushuaia", cd_number == 1)
 
   expect_equal(songs[songs$track_number == 1, ]$duration, readr::parse_time("3:40"))
   expect_equal(songs[songs$track_number == 2, ]$duration, readr::parse_time("3:01"))
@@ -50,7 +50,7 @@ test_that("check duration from Ushuaia CD 1", {
 })
 
 test_that("check duration from Ushuaia CD 2", {
-  songs <- dplyr::filter(get_songs(), cd_title == "Ushuaia", cd_number == 2)
+  songs <- dplyr::filter(get_released_songs(), cd_title == "Ushuaia", cd_number == 2)
 
   expect_equal(songs[songs$track_number == 1, ]$duration, readr::parse_time("3:35"))
   expect_equal(songs[songs$track_number == 2, ]$duration, readr::parse_time("2:46"))

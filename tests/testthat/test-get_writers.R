@@ -5,9 +5,9 @@ test_that("minimal use", {
   expect_true("writer_name" %in% names(get_writers()))
 })
 
-test_that("all song titles match get_songs()", {
+test_that("all song titles match get_released_songs()", {
   writer_song_titles <- unique(get_writers()$song_title)
-  song_titles <- unique(get_songs()$song_title)
+  song_titles <- unique(get_released_songs()$song_title)
   expect_true(
     all(writer_song_titles %in% song_titles)
   )

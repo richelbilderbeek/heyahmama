@@ -18,7 +18,7 @@ test_that("minimal use", {
 })
 
 test_that("song filenames should be well-formed", {
-  song_titles <- get_songs()$song_title
+  song_titles <- get_released_songs()$song_title
   get_song_filename(song_titles[2])
 
   song_filenames <- as.character(

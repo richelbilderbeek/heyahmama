@@ -86,14 +86,14 @@ ggplot2::ggplot(
 Showing the first 6 songs:
 
 ```{r}
-knitr::kable(head(get_songs()))
+knitr::kable(head(get_released_songs()))
 ```
 
 Combining these two tables, we can calculate how many
 songs are released by each formation:
 
 ```{r}
-songs <- get_songs()
+songs <- get_released_songs()
 cds <- get_cds()
 songs_and_cds <- merge(songs, cds)
 song_per_formation <- dplyr::count(songs_and_cds, formation)
