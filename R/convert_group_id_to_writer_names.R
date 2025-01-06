@@ -1,4 +1,6 @@
 #' Convert a group ID to their writers' names
+#' @param group_id a group ID. Group IDs may differ between versions
+#'   of this package
 #' @return a vector of writers
 #' @examples
 #' convert_group_id_to_writer_names(0) # empty

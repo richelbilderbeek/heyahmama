@@ -15,6 +15,9 @@
 #' @author Richèl J.C. Bilderbeek
 #' @export
 get_writers_groups <- function() {
+  song_title <- NULL; rm(song_title) # nolint, fixes warning: no visible binding for global variable
+  group_id <- NULL; rm(group_id) # nolint, fixes warning: no visible binding for global variable
+
   writers <- get_writers()
   writer_names <- get_writer_names()
   song_titles <- get_song_titles()

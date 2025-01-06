@@ -6,6 +6,10 @@
 \usage{
 convert_group_id_to_writer_names(group_id)
 }
+\arguments{
+\item{group_id}{a group ID. Group IDs may differ between versions
+of this package}
+}
 \value{
 a vector of writers
 }
