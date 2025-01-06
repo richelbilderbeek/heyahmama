@@ -33,12 +33,3 @@ test_that("lyrics of all songs have no weird tokens", {
   }
 
 })
-
-test_that("compare to genius.com", {
-  # songs <- geniusr::search_song(song_title)
-  # geniusr::get_lyrics_url("https://genius.com/K3-heyah-mama-lyrics")
-  # geniusr::get_lyrics_search(
-  #   artist_name = "K3",
-  #   song_title = song_title
-  # )
-})
