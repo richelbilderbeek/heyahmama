@@ -37,15 +37,19 @@ get_writers_groups <- function() {
     t$group_id[i] <- bools_to_int(bools)
   }
   song_title_to_group_id <- dplyr::select(t, song_title, group_id)
-  group_id_to_writer_name <- tibble::tibble(
-    group_id = unique(t$group_id)
+
+  tibbles <- list()
+  group_ids <- unique(t$group_id)
+  for (i in seq_len(length(group_ids))) {
+    tibbles[[i]] <- tibble::tibble(
+      group_id = group_ids[i],
+      writer_name = convert_group_id_to_writer_names(group_ids[i])
+    )
+  }
+  group_id_to_writer_name <- dplyr::bind_rows(tibbles)
+
+  list(
+    song_title_to_group_id = song_title_to_group_id,
+    group_id_to_writer_name = group_id_to_writer_name
   )
-
-  expect_true("song_title_to_group_id" %in% names(t))
-  expect_true("group_id_to_writer_name" %in% names(t))
-  expect_true("song_title" %in% names(t$songs_to_group_id))
-  expect_true("group_id" %in% names(t$songs_to_group_id))
-  expect_true("writer_name" %in% names(t$group_id_to_writer_names))
-  expect_true("group_id" %in% names(t$group_id_to_writer_names))
-
 }
