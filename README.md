@@ -4,7 +4,7 @@
 
 [![R-CMD-check](https://github.com/richelbilderbeek/heyahmama/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/richelbilderbeek/heyahmama/actions/workflows/R-CMD-check.yaml)
 [![codecov.io](https://codecov.io/github/richelbilderbeek/heyahmama/coverage.svg?branch=main)](https://codecov.io/github/richelbilderbeek/heyahmama/branch/main)
-[![DOI](https://zenodo.org/badge/908638871.svg)](https://doi.org/10.5281/zenodo.14561968)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14599760.svg)](https://doi.org/10.5281/zenodo.14599760)
 
 <!-- markdownlint-enable MD013 -->
 
